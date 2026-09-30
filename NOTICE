@@ -1,0 +1,26 @@
+Building Passport Viewer (concept demonstration)
+Copyright 2026 Spherity GmbH
+
+Licensed under the Apache License, Version 2.0. See the LICENSE file.
+
+Trademarks
+The Spherity name and logo are trademarks of Spherity GmbH. Section 6 of the
+Apache License grants no rights to use them.
+
+Third-party names
+The demonstration is fictional. Smart Home Co, FlexCo and the other parties are
+invented. Names of real companies in the flex service selection (1KOMMA5°,
+Octopus Energy Germany, Rabot Energy, sonnen, Tibber) are used as text only, to
+identify their public offers. The ordering is a fictional demonstration ordering
+and is not an assessment. There is no affiliation with, or endorsement by, those
+companies. Facts about them were read from their public pages on 2026-09-30
+through a summarising tool and must be re-read before any customer-facing use.
+
+Third-party components
+- Icons: Untitled UI free line icons, taken from the MIT-licensed mirror
+  mckenziearts/blade-untitledui-icons. Confirm the Untitled UI licence terms
+  before redistribution.
+- Fonts: Archivo (Copyright 2020 The Archivo Project Authors) and IBM Plex Mono
+  (Copyright 2017 IBM Corp.) are bundled in assets/fonts/ under the SIL Open
+  Font License 1.1. The licence texts are in the same folder (OFL-Archivo.txt,
+  OFL-IBM-Plex.txt). The page makes no request to a font service.

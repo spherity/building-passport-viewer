@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mock-up (specimen, not issued): IEC 60335-2-21 · Residential smart-home energy system reference system</title>
+<meta name="robots" content="noindex"><meta name="dpp:mockup" content="true"><meta name="dpp:layout" content="tuv-type">
+<style>
+@page{size:A4;margin:0}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#dfe2e5}
+body{font-family:Arial,Helvetica,"Liberation Sans",sans-serif;color:#1c1f23;font-size:10pt;line-height:1.35;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{position:relative;width:210mm;height:297mm;margin:0 auto 8mm;background:#fff;overflow:hidden;page-break-after:always;break-after:page}
+.sheet:last-child{margin-bottom:0;page-break-after:auto;break-after:auto}
+@media print{html,body{background:#fff}.sheet{margin:0}}
+.banner{position:absolute;left:0;right:0;top:0;height:9mm;background:#b3202a;color:#fff;font-weight:700;font-size:9.5pt;letter-spacing:.32em;text-transform:uppercase;display:flex;align-items:center;justify-content:center;z-index:5}
+.wm{position:absolute;left:50%;top:52%;width:0;height:0;z-index:9;pointer-events:none}
+.wm span{position:absolute;left:0;top:0;transform:translate(-50%,-50%) rotate(-38deg);white-space:nowrap;font-weight:900;font-size:30pt;letter-spacing:.04em;color:rgba(179,32,42,.20);-webkit-text-stroke:1pt rgba(179,32,42,.42);text-transform:uppercase}
+.wm.w2 span{font-size:41pt;transform:translate(-50%,-50%) translate(0,-150mm) rotate(-38deg) translate(0,0);color:rgba(179,32,42,.10);-webkit-text-stroke:.8pt rgba(179,32,42,.16)}
+.foot{position:absolute;left:0;right:0;bottom:0;z-index:5;font-size:7.4pt;color:#4c545c}
+.foot .disc{margin:0 14mm 2mm;padding-top:1.6mm;border-top:.4mm solid #9aa1a8;font-weight:700;color:#7a1a21}
+.foot .meta{margin:0 14mm 6mm;display:flex;justify-content:space-between;gap:8mm}
+.na{color:#6b737b;font-style:italic}
+.mask{font-family:"Liberation Mono","Courier New",monospace;letter-spacing:.04em}
+.seal.stamp{border-radius:50%;border-style:solid;width:30mm!important;height:30mm!important;padding:3mm;box-sizing:border-box}
+.stamp{border:.5mm dashed #7d858c;color:#5d666e;display:flex;align-items:center;justify-content:center;text-align:center;font-size:8pt;text-transform:uppercase;letter-spacing:.08em;line-height:1.25}
+.body{position:absolute;left:0;right:0;top:9mm;bottom:22mm}
+
+/* ---- tuv-type */
+.tuv .side{position:absolute;left:0;top:9mm;bottom:0;width:15mm;background:#023852;color:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tuv .side span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;font-weight:700;font-size:9pt;letter-spacing:.2em}
+.tuv .foot .disc,.tuv .foot .meta{margin-left:20mm}
+.tuv .body{left:15mm}
+.tuv .inner{padding:8mm 15mm 0 16mm}
+.tuv .hdr{display:flex;justify-content:space-between;align-items:flex-start;height:26mm}
+.tuv .iss{font-size:8.5pt;line-height:1.3;color:#4c545c}
+.tuv .iss b{display:block;font-size:12pt;color:#1c1f23;margin-bottom:.5mm}
+.tuv .qr{width:20mm;height:20mm;font-size:6.2pt;padding:1mm}
+.tuv h1{margin:4mm 0 2mm;font-size:23pt;font-weight:700;letter-spacing:.42em;line-height:1}
+.tuv .no{font-size:12.5pt;font-weight:700;margin:0 0 9mm}
+.tuv .row{display:grid;grid-template-columns:47mm 1fr;column-gap:4mm;margin-bottom:10mm}
+.tuv .row>.k{font-weight:700;font-size:11.5pt}
+.tuv .row>.v{font-size:10pt}
+.tuv .row>.v b{font-size:11.5pt}
+.tuv .row .sm{font-size:9pt}
+.tuv .seal{width:34mm;height:34mm}
+.tuv .stmt{margin:3mm 0 11mm;font-size:9.4pt;line-height:1.42}
+.tuv .row.tight{margin-bottom:5mm}
+.tuv .sig{display:flex;gap:6mm;margin-top:8mm}
+.tuv .sig .d{width:47mm;font-weight:700}
+.tuv .sigbox{width:64mm;height:15mm;border-bottom:.3mm solid #7d858c;margin-left:8mm;display:flex;align-items:flex-end;justify-content:center;font-size:7.6pt;color:#6b737b;padding-bottom:1mm}
+.tuv h2{font-size:12.5pt;margin:0 0 3mm}
+.tuv h3{font-size:10.5pt;margin:7mm 0 2.4mm}
+.tuv table.params{width:100%;border-collapse:collapse;font-size:9.4pt}
+.tuv table.params th,.tuv table.params td{text-align:left;padding:1.8mm 2mm;border-bottom:.25mm solid #c3c8cd;vertical-align:top}
+.tuv table.params th{width:62mm;font-weight:700;background:#f1f3f4;border-right:.25mm solid #c3c8cd}
+.tuv ol.std,.tuv ul.cond{margin:0;padding-left:5mm;font-size:9.4pt}
+.tuv ol.std li,.tuv ul.cond li{margin-bottom:1.6mm}
+.tuv .scope{font-size:9.4pt;margin:0}
+
+/* ---- cb */
+.cb .inner{padding:9mm 12mm 0}
+.cb .frame{border:.55mm solid #1c1f23}
+.cb .top{display:grid;grid-template-columns:1fr 60mm;border-bottom:.55mm solid #1c1f23;height:26mm}
+.cb .top .l{padding:3mm 4mm;border-right:.55mm solid #1c1f23;display:flex;flex-direction:column;justify-content:center}
+.cb .top .l b{font-size:12pt}
+.cb .top .l span{font-size:8.5pt;color:#4c545c}
+.cb .top .r{display:grid;grid-template-rows:9mm 1fr}
+.cb .top .r .t{background:#1b4f8a;color:#fff;text-align:center;line-height:9mm;font-size:9.5pt}
+.cb .top .r .n{display:flex;align-items:center;justify-content:center;font-size:10.5pt}
+.cb .band{background:#1b4f8a;color:#fff;font-size:8.6pt;letter-spacing:.14em;padding:2.4mm 3mm;line-height:1.4;margin:2mm 0 0;border:.55mm solid #1c1f23}
+.cb h1{margin:0;padding:2mm 3mm 1.6mm;font-size:12pt;font-weight:700;border-left:.55mm solid #1c1f23;border-right:.55mm solid #1c1f23;background:#fff}
+.cb .form{margin:0 0 0 0;display:grid;grid-template-columns:78mm 1fr;border:.55mm solid #1c1f23;border-top:0}
+.cb .form>div{padding:2.4mm 3mm;font-size:8.8pt;border-top:.25mm solid #c3c8cd}
+.cb .form>div:nth-child(-n+2){border-top:0}
+.cb .form>.k{color:#1c1f23}
+.cb .form>.k small{display:block;font-size:7.2pt;color:#4c545c;margin-top:1mm;font-style:italic}
+.cb .form>.v{background:#e6e8ea;font-family:"Liberation Mono","Courier New",monospace;font-size:8.5pt;border-left:.25mm solid #9aa1a8}
+.cb .form>.tall{min-height:17mm}
+.cb .issued{border:.55mm solid #1c1f23;border-top:0}
+.cb .issued .lead{padding:2mm 3mm;font-size:9pt;border-bottom:.25mm solid #c3c8cd}
+.cb .issued .cols{display:grid;grid-template-columns:44mm 1fr 58mm;background:#e6e8ea;min-height:30mm}
+.cb .issued .cols>div{padding:3mm}
+.cb .issued .seal{width:36mm;height:24mm;margin:2mm}
+.cb .issued .ncb b{font-size:11pt}
+.cb .issued .ncb{font-size:8.6pt;line-height:1.45}
+.cb .issued .sg{font-size:8.6pt;display:flex;flex-direction:column;justify-content:flex-end;gap:2mm}
+.cb .issued .sg .line{border-bottom:.3mm solid #7d858c;height:8mm;font-size:7.6pt;color:#6b737b;display:flex;align-items:flex-end;padding-bottom:1mm}
+.cb .copy{font-size:7.2pt;color:#4c545c;margin:2.2mm 1mm 0;line-height:1.35}
+.cb .p2h{font-size:12pt;font-weight:700;margin:0 0 3mm}
+.cb table.params{width:100%;border-collapse:collapse;font-size:8.8pt}
+.cb table.params th,.cb table.params td{text-align:left;padding:2mm 3mm;border:.25mm solid #9aa1a8;vertical-align:top}
+.cb table.params th{width:64mm;background:#e6e8ea;font-weight:400}
+
+/* ---- ul */
+.ul .inner{padding:9mm 15mm 0}
+.ul .hd{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.8mm solid #1c1f23;padding:8mm 0 3mm}
+.ul .hd b{font-size:15pt;letter-spacing:.02em}
+.ul .hd span{font-size:8.5pt;color:#4c545c;display:block;margin-top:.8mm}
+.ul .ttl{font-size:21pt;font-weight:700;margin:9mm 0 1mm;letter-spacing:.02em}
+.ul .sub{font-size:9.6pt;color:#4c545c;margin:0 0 6mm}
+.ul .idgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:.3mm solid #7d858c;margin-bottom:6mm}
+.ul .idgrid div{padding:2.4mm 3mm;border-right:.3mm solid #7d858c;font-size:8.6pt}
+.ul .idgrid div:last-child{border-right:0}
+.ul .idgrid small{display:block;font-size:7pt;letter-spacing:.1em;text-transform:uppercase;color:#4c545c;margin-bottom:1mm}
+.ul .idgrid b{font-size:10pt}
+.ul p.lead{font-size:9.6pt;margin:0 0 6mm;line-height:1.45}
+.ul table.list{width:100%;border-collapse:collapse;font-size:9.2pt;margin-bottom:6mm}
+.ul table.list th,.ul table.list td{text-align:left;padding:2.2mm 2.6mm;border:.3mm solid #7d858c;vertical-align:top}
+.ul table.list th{width:46mm;background:#eef0f1;font-weight:700}
+.ul h3{font-size:10.5pt;margin:6mm 0 2mm;text-transform:uppercase;letter-spacing:.08em}
+.ul ul.cond{margin:0;padding-left:5mm;font-size:9.2pt}
+.ul ul.cond li{margin-bottom:1.6mm}
+.ul .sealrow{display:flex;justify-content:space-between;align-items:flex-end;margin-top:16mm}
+.ul .seal{width:36mm;height:24mm}
+.ul .sigbox{width:64mm;border-bottom:.3mm solid #7d858c;height:12mm;font-size:7.6pt;color:#6b737b;display:flex;align-items:flex-end;padding-bottom:1mm}
+.ul table.params{width:100%;border-collapse:collapse;font-size:9.2pt}
+.ul table.params th,.ul table.params td{text-align:left;padding:2mm 2.6mm;border:.3mm solid #7d858c;vertical-align:top}
+.ul table.params th{width:62mm;background:#eef0f1}
+
+/* ---- generic */
+.generic .inner{padding:9mm 16mm 0}
+.generic .hd{border-bottom:.6mm solid #023852;padding:8mm 0 3mm;display:flex;justify-content:space-between;align-items:flex-end}
+.generic .hd b{font-size:14pt}
+.generic .hd span{font-size:8.5pt;color:#4c545c}
+.generic h1{font-size:22pt;margin:9mm 0 1mm}
+.generic .no{font-size:11.5pt;font-weight:700;margin:0 0 7mm}
+.generic dl{display:grid;grid-template-columns:48mm 1fr;margin:0;border-top:.3mm solid #c3c8cd}
+.generic dt,.generic dd{margin:0;padding:2.6mm 1mm;border-bottom:.3mm solid #c3c8cd;font-size:9.6pt}
+.generic dt{font-weight:700}
+.generic .sealrow{display:flex;justify-content:space-between;align-items:flex-end;margin-top:9mm}
+.generic .seal{width:34mm;height:34mm}
+.generic .sigbox{width:64mm;border-bottom:.3mm solid #7d858c;height:12mm;font-size:7.6pt;color:#6b737b;display:flex;align-items:flex-end;padding-bottom:1mm}
+.generic h2{font-size:12pt;margin:0 0 3mm}
+.generic table.params{width:100%;border-collapse:collapse;font-size:9.4pt}
+.generic table.params th,.generic table.params td{text-align:left;padding:2mm;border-bottom:.25mm solid #c3c8cd;vertical-align:top}
+.generic table.params th{width:60mm;background:#f1f3f4}
+</style></head><body>
+<section class="sheet tuv" data-page="1" aria-label="Page 1 of 2, mock-up, not issued">
+<div class="banner">Specimen, not issued</div>
+<div class="side" aria-hidden="true"><span>ZERTIFIKAT ◆ CERTIFICATE ◆ CERTIFICADO ◆ CERTIFICAT ◆ ZERTIFIKAT ◆ CERTIFICATE ◆ CERTIFICADO ◆ CERTIFICAT</span></div>
+<div class="body"><div class="inner">
+<div class="hdr"><div class="iss"><b>Certification body (as printed on an issued certificate)</b>Certification Body<br>Address of the issuer: not specified in the example data</div><div class="qr stamp">No QR code (specimen)</div></div>
+<h1>CERTIFICATE</h1>
+<p class="no">No. <span class="mask">XXXX-XXXXXX</span></p>
+<div class="row"><div class="k">Holder of Certificate:</div><div class="v"><b>Fictional manufacturer</b><br><span class="sm na">Street, postcode, city, country (not specified in the example data)</span></div></div>
+<div class="row"><div class="k">Certification Mark:</div><div class="v"><div class="seal stamp">Specimen seal · not a certification mark</div></div></div>
+<div class="row"><div class="k">Product:</div><div class="v"><b>Electric heating element for hot water</b></div></div>
+<p class="stmt">The product named above is the subject of a voluntary assessment against the standard listed below, in the edition stated. This mock-up shows where the statement of conformity, the permission to use the certification mark and the conditions of the issuer would stand. No mark may be affixed, nothing has been tested and no conformity is conferred. This certificate would be valid until the listed date, unless it is cancelled earlier.</p>
+<div class="row tight"><div class="k">Standard:</div><div class="v"><b>IEC 60335-2-21</b></div></div>
+<div class="row tight"><div class="k">Certification scheme:</div><div class="v">Safety certificate (form specimen)</div></div>
+<div class="row tight"><div class="k">Test report no.:</div><div class="v"><span class="mask">XXXXXXXXXXXXXX</span></div></div>
+<div class="row tight"><div class="k">Valid until:</div><div class="v">not issued</div></div>
+<div class="sig"><div class="d">Date, not issued</div><div class="sigbox">No signature (specimen)</div></div>
+</div></div>
+<div class="wm w1" aria-hidden="true"><span>MOCK-UP · NOT ISSUED · EXAMPLE DATA</span></div>
+<div class="foot"><p class="disc">This is a mock-up made for a concept demonstration. It is not a certificate of Certification body (as printed on an issued certificate) and confers no conformity.</p><div class="meta"><span>Page 1 of 2 · Mock-up, c-spec-60335-2-21-heater</span><span>Certification body (as printed on an issued certificate)</span></div></div>
+</section>
+<section class="sheet tuv" data-page="2" aria-label="Page 2 of 2, mock-up, not issued">
+<div class="banner">Specimen, not issued</div>
+<div class="body"><div class="inner">
+<div class="hdr" style="height:20mm"><div class="iss"><b>Certification body (as printed on an issued certificate)</b>Certification Body<br>Address of the issuer: not specified in the example data</div><div></div></div>
+<h2>Model(s):</h2>
+<p class="scope">Electric heating element for hot water</p>
+<h3>Parameters:</h3>
+<table class="params"><tbody><tr><th scope="row">Model</th><td>Electric heating element for hot water</td></tr><tr><th scope="row">Rating and principal characteristics</th><td><span class="na">to be stated in the issued certificate</span></td></tr><tr><th scope="row">Ambient conditions</th><td><span class="na">to be stated in the issued certificate</span></td></tr><tr><th scope="row">Protective class</th><td><span class="na">to be stated in the issued certificate</span></td></tr></tbody></table>
+<h3>Scope of the certificate:</h3>
+<p class="scope">Safety of storage water heaters.</p>
+<h3>Tested according to:</h3>
+<ol class="std"><li>IEC 60335-2-21</li></ol>
+<h3>Conditions:</h3>
+<ul class="cond">
+<li>The certificate applies to the product configuration named above and to no other.</li>
+<li>Changes to the product, its software or its firmware require a new assessment.</li>
+<li>The certificate holder must not transfer the certificate to third parties.</li>
+<li>Note in the record: Specimen of the form. No number, not issued, neutral specimen seal only. Fictional manufacturer (F0). Edition to be confirmed (research lists 2022).</li>
+</ul>
+</div></div>
+<div class="wm w1" aria-hidden="true"><span>MOCK-UP · NOT ISSUED · EXAMPLE DATA</span></div>
+<div class="foot"><p class="disc">This is a mock-up made for a concept demonstration. It is not a certificate of Certification body (as printed on an issued certificate) and confers no conformity.</p><div class="meta"><span>Page 2 of 2 · Mock-up, c-spec-60335-2-21-heater</span><span>Certification body (as printed on an issued certificate)</span></div></div>
+</section>
+</body></html>
