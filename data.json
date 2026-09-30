@@ -27982,19 +27982,23 @@
       "points": [
         {
           "title": "One source of data",
-          "text": "Today the dashboard and the passports are generated from the same system specification, so they hold the same values. Nothing is typed twice."
+          "text": "Today the dashboard and the passports are generated from the same system specification, so they hold the same values. Nothing is typed twice.",
+          "icon": "database"
         },
         {
           "title": "Not yet a live read",
-          "text": "The dashboard does not read the issued passports on the VERA platform while you look at it. It links to each passport once that passport is active. Reading the issued credentials directly, and checking them, is the next step for a connected viewer."
+          "text": "The dashboard does not read the issued passports on the VERA platform while you look at it. It links to each passport once that passport is active. Reading the issued credentials directly, and checking them, is the next step for a connected viewer.",
+          "icon": "clock"
         },
         {
           "title": "What you see is labelled",
-          "text": "Every value carries a status (verified, declared, illustrative or unknown). Unknown is never shown as absent. Values of this fictional home are illustrative unless a source is shown."
+          "text": "Every value carries a status (verified, declared, illustrative or unknown). Unknown is never shown as absent. Values of this fictional home are illustrative unless a source is shown.",
+          "icon": "check-circle"
         },
         {
           "title": "What it does not show",
-          "text": "No personal data, no live measurements and no commercial terms. Status counts, alerts and the knowledge graph are calculated from the passport data and add no data of their own."
+          "text": "No personal data, no live measurements and no commercial terms. Status counts, alerts and the knowledge graph are calculated from the passport data and add no data of their own.",
+          "icon": "lock"
         }
       ],
       "concept": "Concept status. The claim, aggregation and scoped-access mechanisms below are a concept of this project. No text read creates a legal route to claim a product passport into an account or a wallet, and the EU Digital Identity Wallet framework has no product-ownership attestation type yet. What is established law or a published specification is marked with its source; everything else is a proposal.",
@@ -28005,34 +28009,235 @@
           {
             "actor": "Installer",
             "title": "Commission and issue",
-            "text": "The installer commissions the system. The passports of the components and of the system are issued, and each component carries a data carrier such as a QR code that leads to its passport."
+            "text": "The installer commissions the system. The passports of the components and of the system are issued, and each component carries a data carrier such as a QR code that leads to its passport.",
+            "icon": "tool-02"
           },
           {
             "actor": "Homeowner or installer",
             "title": "Claim the passports",
-            "text": "The homeowner scans the code of the system passport, alone or with the installer. The installer confirms that these passports belong to this home. There is no standard for this attestation yet."
+            "text": "The homeowner scans the code of the system passport, alone or with the installer. The installer confirms that these passports belong to this home. There is no standard for this attestation yet.",
+            "icon": "link-03"
           },
           {
             "actor": "Homeowner",
             "title": "Connect an account or wallet",
-            "text": "The claim is stored in a user account or a wallet as an attestation that the holder operates these passports. A private owner uses the EU Digital Identity Wallet. A company or public body uses a wallet for legal persons, proposed as the European Business Wallet, with a mandate for the person who acts for it."
+            "text": "The claim is stored in a user account or a wallet as an attestation that the holder operates these passports. A private owner uses the EU Digital Identity Wallet. A company or public body uses a wallet for legal persons, proposed as the European Business Wallet, with a mandate for the person who acts for it.",
+            "icon": "fingerprint-04"
           },
           {
             "actor": "Viewer",
             "title": "Verify and aggregate",
-            "text": "As soon as the claim exists, the viewer checks each passport and builds the home model: scene, hierarchy, alerts, registrations and knowledge graph."
+            "text": "As soon as the claim exists, the viewer checks each passport and builds the home model: scene, hierarchy, alerts, registrations and knowledge graph.",
+            "icon": "dataflow-03"
           },
           {
             "actor": "Homeowner",
             "title": "Grant scoped access",
-            "text": "The owner grants each party a scope per data category and period: installer, grid operator, supplier, flex provider, registers, manufacturers. A grant can be withdrawn."
+            "text": "The owner grants each party a scope per data category and period: installer, grid operator, supplier, flex provider, registers, manufacturers. A grant can be withdrawn.",
+            "icon": "lock-unlocked-04"
           },
           {
             "actor": "Parties",
             "title": "Use and stay in scope",
-            "text": "Each party sees its own view. Duties set by law, such as grid operation, metering and registers, continue by law. Other access ends with the grant."
+            "text": "Each party sees its own view. Duties set by law, such as grid operation, metering and registers, continue by law. Other access ends with the grant.",
+            "icon": "eye"
           }
-        ]
+        ],
+        "diagram": {
+          "title": "Owner story chart",
+          "width": 1240,
+          "height": 470,
+          "caption": "The owner story as a chart. Each row is a role, each box a step, read from left to right.",
+          "lanes": [
+            {
+              "x": 10,
+              "y": 8,
+              "w": 1220,
+              "h": 84,
+              "label": "Installer"
+            },
+            {
+              "x": 10,
+              "y": 98,
+              "w": 1220,
+              "h": 84,
+              "label": "Homeowner"
+            },
+            {
+              "x": 10,
+              "y": 188,
+              "w": 1220,
+              "h": 84,
+              "label": "Wallet or account"
+            },
+            {
+              "x": 10,
+              "y": 278,
+              "w": 1220,
+              "h": 84,
+              "label": "Connected viewer"
+            },
+            {
+              "x": 10,
+              "y": 368,
+              "w": 1220,
+              "h": 84,
+              "label": "Parties"
+            }
+          ],
+          "boxes": [
+            {
+              "id": "s1",
+              "x": 190,
+              "y": 18,
+              "w": 150,
+              "h": 64,
+              "title": "1 Issue passports",
+              "text": "Passports issued, code on the parts",
+              "kind": "party"
+            },
+            {
+              "id": "s2b",
+              "x": 365,
+              "y": 18,
+              "w": 150,
+              "h": 64,
+              "title": "2 Confirm",
+              "text": "Passports belong to this home",
+              "kind": "party"
+            },
+            {
+              "id": "s2a",
+              "x": 365,
+              "y": 108,
+              "w": 150,
+              "h": 64,
+              "title": "2 Claim",
+              "text": "Scan the code of the system passport",
+              "kind": "plain"
+            },
+            {
+              "id": "s3",
+              "x": 540,
+              "y": 198,
+              "w": 150,
+              "h": 64,
+              "title": "3 Store the claim",
+              "text": "EUDI Wallet or Business Wallet",
+              "kind": "store"
+            },
+            {
+              "id": "s4",
+              "x": 715,
+              "y": 288,
+              "w": 150,
+              "h": 64,
+              "title": "4 Verify, aggregate",
+              "text": "Build the home model",
+              "kind": "gate"
+            },
+            {
+              "id": "s5",
+              "x": 890,
+              "y": 108,
+              "w": 150,
+              "h": 64,
+              "title": "5 Grant access",
+              "text": "Scope, limits and period",
+              "kind": "plain"
+            },
+            {
+              "id": "s6",
+              "x": 1065,
+              "y": 378,
+              "w": 150,
+              "h": 64,
+              "title": "6 Use in scope",
+              "text": "Own view and audit log",
+              "kind": "party"
+            }
+          ],
+          "arrows": [
+            {
+              "from": "s1",
+              "to": "s2a",
+              "via": [
+                [
+                  352,
+                  50
+                ],
+                [
+                  352,
+                  140
+                ]
+              ]
+            },
+            {
+              "from": "s2a",
+              "to": "s2b",
+              "fromSide": "t",
+              "toSide": "b",
+              "kind": "consent",
+              "both": true
+            },
+            {
+              "from": "s2a",
+              "to": "s3",
+              "via": [
+                [
+                  527,
+                  140
+                ],
+                [
+                  527,
+                  230
+                ]
+              ]
+            },
+            {
+              "from": "s3",
+              "to": "s4",
+              "via": [
+                [
+                  702,
+                  230
+                ],
+                [
+                  702,
+                  320
+                ]
+              ]
+            },
+            {
+              "from": "s4",
+              "to": "s5",
+              "via": [
+                [
+                  877,
+                  320
+                ],
+                [
+                  877,
+                  140
+                ]
+              ]
+            },
+            {
+              "from": "s5",
+              "to": "s6",
+              "via": [
+                [
+                  1052,
+                  140
+                ],
+                [
+                  1052,
+                  410
+                ]
+              ]
+            }
+          ]
+        }
       },
       "aggregation": {
         "title": "How the data is aggregated",
@@ -28052,14 +28257,14 @@
             "y": 140,
             "w": 235,
             "h": 440,
-            "label": "Connected passport viewer"
+            "label": "Viewer"
           },
           {
             "x": 870,
             "y": 140,
             "w": 200,
             "h": 440,
-            "label": "Parties, scoped"
+            "label": "Parties: scoped views"
           }
         ],
         "boxes": [
@@ -28181,7 +28386,8 @@
             "h": 52,
             "title": "Installer",
             "text": "",
-            "kind": "party"
+            "kind": "party",
+            "icon": "tool"
           },
           {
             "id": "p2",
@@ -28191,7 +28397,8 @@
             "h": 52,
             "title": "Grid operator",
             "text": "",
-            "kind": "party"
+            "kind": "party",
+            "icon": "zap"
           },
           {
             "id": "p3",
@@ -28201,7 +28408,8 @@
             "h": 52,
             "title": "Energy supplier",
             "text": "",
-            "kind": "party"
+            "kind": "party",
+            "icon": "file-06"
           },
           {
             "id": "p4",
@@ -28211,7 +28419,8 @@
             "h": 52,
             "title": "Flex service provider",
             "text": "",
-            "kind": "party"
+            "kind": "party",
+            "icon": "zap-fast"
           },
           {
             "id": "p5",
@@ -28221,7 +28430,8 @@
             "h": 52,
             "title": "Registers",
             "text": "",
-            "kind": "party"
+            "kind": "party",
+            "icon": "clipboard-check"
           },
           {
             "id": "p6",
@@ -28260,24 +28470,26 @@
             "fromSide": "b",
             "toSide": "t",
             "label": "which passports",
-            "dx": 52,
-            "dy": 0,
             "from": "w"
           },
           {
             "to": "v1",
+            "toAt": 0.3,
             "from": "s1"
           },
           {
             "to": "v1",
+            "toAt": 0.7,
             "from": "s2"
           },
           {
             "to": "v2",
+            "toAt": 0.3,
             "from": "s3"
           },
           {
             "to": "v2",
+            "toAt": 0.7,
             "from": "s4"
           },
           {
@@ -28308,8 +28520,6 @@
             "toSide": "t",
             "kind": "consent",
             "label": "applies scope",
-            "dx": 52,
-            "dy": 0,
             "from": "gate"
           },
           {
@@ -28317,9 +28527,6 @@
             "fromSide": "r",
             "toSide": "l",
             "kind": "consent",
-            "label": "scoped views",
-            "dx": -18,
-            "dy": -26,
             "from": "v3"
           },
           {
@@ -28356,7 +28563,6 @@
             "toSide": "r",
             "kind": "block",
             "label": "no access",
-            "dy": -10,
             "from": "p6"
           }
         ],
@@ -28508,42 +28714,50 @@
           {
             "title": "Three planes, three rights",
             "text": "Passport data, measured data and control signals are separate. A right on one plane gives no right on another.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "dataflow-03"
           },
           {
             "title": "The energy manager is the gate for control",
             "text": "Local control passes through the home energy manager, which keeps the list of allowed senders and their limits. Grid operator control comes through the meter gateway and its control box under the smart metering PKI. A manufacturer cloud has no route into either path.",
-            "basis": "VDE FNN note 2025 on the control interface; BSI smart metering PKI."
+            "basis": "VDE FNN note 2025 on the control interface; BSI smart metering PKI.",
+            "icon": "cpu-chip"
           },
           {
             "title": "Trust by pairing, not by cloud",
             "text": "Local devices trust each other by mutual pairing, for example with EEBUS. A vendor cloud account does not create trust with the device of another vendor.",
-            "basis": "EEBus SHIP installation specification v1.0.0."
+            "basis": "EEBus SHIP installation specification v1.0.0.",
+            "icon": "link-03"
           },
           {
             "title": "Grants instead of standing access",
             "text": "Each party reads through a grant with a data category, a purpose and a period. It ends or is withdrawn. Access levels fixed by law, such as the battery passport tiers, can only be narrowed, never widened.",
-            "basis": "Battery Regulation Art. 77 and Annex XIII; ESPR Art. 9 and 10 set access by role."
+            "basis": "Battery Regulation Art. 77 and Annex XIII; ESPR Art. 9 and 10 set access by role.",
+            "icon": "calendar"
           },
           {
             "title": "Data minimisation and sovereignty",
             "text": "Household data stays at home. The viewer keeps no copy of private data by default. The owner can access, share and move the data.",
-            "basis": "GDPR Art. 5(1)(c), 7(3) and 20; Data Act Art. 4 and 5."
+            "basis": "GDPR Art. 5(1)(c), 7(3) and 20; Data Act Art. 4 and 5.",
+            "icon": "lock"
           },
           {
             "title": "Signed security updates only",
             "text": "A manufacturer may ship signed security updates. The user keeps the opt-out. An update carries no new control right.",
-            "basis": "Cyber Resilience Act Annex I Part I; the last sentence is concept."
+            "basis": "Cyber Resilience Act Annex I Part I; the last sentence is concept.",
+            "icon": "shield-plus"
           },
           {
             "title": "Evidence for the owner",
             "text": "Every control action is logged at the energy manager, as the grid operator rules already require for reductions, and the owner can see it in the viewer.",
-            "basis": "BK6-22-300: the record is kept for two years. Showing it in the viewer is concept."
+            "basis": "BK6-22-300: the record is kept for two years. Showing it in the viewer is concept.",
+            "icon": "file-06"
           },
           {
             "title": "Why the cloud is kept off the control path",
             "text": "Advisories describe hard-coded credentials and cloud interface flaws in inverter software, and the BSI names manufacturer manipulation of inverters as a risk.",
-            "basis": "CISA advisory ICSA-25-072-12 on one vendor; BSI position paper on energy sector cybersecurity."
+            "basis": "CISA advisory ICSA-25-072-12 on one vendor; BSI position paper on energy sector cybersecurity.",
+            "icon": "wifi"
           }
         ],
         "src": [
@@ -28570,7 +28784,8 @@
               "Consent stays with the owner and can be withdrawn.",
               "A change of provider does not lose the history.",
               "Selective disclosure: a party sees what it needs and no more."
-            ]
+            ],
+            "icon": "home-smile"
           },
           {
             "party": "Installer",
@@ -28579,7 +28794,8 @@
               "Registration data is pre-filled from the passports.",
               "Commissioning and service history are documented.",
               "Fewer callbacks for missing documents."
-            ]
+            ],
+            "icon": "tool"
           },
           {
             "party": "Grid operator",
@@ -28588,7 +28804,8 @@
               "The certificate identifier for the register is present.",
               "Which devices are controllable, and through which interface, is clear.",
               "Control is limited to what the law allows and is logged."
-            ]
+            ],
+            "icon": "zap"
           },
           {
             "party": "Energy supplier",
@@ -28596,7 +28813,8 @@
               "A correct device inventory for tariffs.",
               "Consent-based access to flexibility options.",
               "Fewer onboarding forms."
-            ]
+            ],
+            "icon": "file-06"
           },
           {
             "party": "Flex service provider",
@@ -28604,7 +28822,8 @@
               "Verified device capability and interfaces before the contract.",
               "A consent record it can point to, with a defined scope.",
               "Its own service passport shows provenance and issuer."
-            ]
+            ],
+            "icon": "zap-fast"
           },
           {
             "party": "Registers",
@@ -28612,14 +28831,16 @@
               "Complete data at the source.",
               "A verified link between a register entry and a passport.",
               "Fewer late or wrong entries."
-            ]
+            ],
+            "icon": "clipboard-check"
           },
           {
             "party": "Manufacturer",
             "points": [
               "A defined scope for its product data service.",
               "No need to hold household data to support its product."
-            ]
+            ],
+            "icon": "package"
           },
           {
             "party": "Cyber security",
@@ -28628,7 +28849,8 @@
               "Least privilege for every party, with grants that expire.",
               "Signed passports show which firmware and certificates belong to a device.",
               "Evidence for the Cyber Resilience Act, and a clear view of who has access."
-            ]
+            ],
+            "icon": "shield-tick"
           },
           {
             "party": "Data privacy and sovereignty",
@@ -28637,7 +28859,8 @@
               "Data minimisation by design.",
               "Flows by law are kept apart from flows by consent.",
               "Access, sharing and portability for the owner."
-            ]
+            ],
+            "icon": "lock-04"
           }
         ]
       },
@@ -28648,22 +28871,26 @@
           {
             "title": "Building passport",
             "text": "The home passport becomes the entry of a building passport. The Energy Performance of Buildings Directive defines a digital building logbook (Art. 2(41)) and gives owners direct access to data of the building systems and consent-based sharing with third parties (Art. 16(1)). The transposition date was 29 May 2026, and this project has not checked the German transposition.",
-            "basis": "Directive (EU) 2024/1275, Art. 2(41), 16(1) and 35."
+            "basis": "Directive (EU) 2024/1275, Art. 2(41), 16(1) and 35.",
+            "icon": "building-07"
           },
           {
             "title": "Appliance passports",
             "text": "Each component passport is an appliance passport in the same structure. Under the Ecodesign Regulation no delegated act sets passport rules for heat pumps, water heaters, inverters or home energy managers. EV chargers appear in the working plan for 2028, and that plan is not law. Energy label data in the product database stays at model level.",
-            "basis": "Regulation (EU) 2024/1781; working plan COM(2025) 187; Regulation (EU) 2017/1369, Art. 12."
+            "basis": "Regulation (EU) 2024/1781; working plan COM(2025) 187; Regulation (EU) 2017/1369, Art. 12.",
+            "icon": "cube-outline"
           },
           {
             "title": "Same mechanisms",
             "text": "The claim, the wallet attestation, the aggregation and the grants do not depend on the product type. A new passport type adds data and roles, not a new access model.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "link-03"
           },
           {
             "title": "Agents on the passports",
             "text": "Software agents attached to the home passports and to the flex service passport could find, compare, negotiate and contract flexibility for the owner, and understand each other through shared semantics. This is a hypothesis and is set out in the next section with what is established and what is not.",
-            "basis": "Concept; see the section below."
+            "basis": "Concept; see the section below.",
+            "icon": "stars-02"
           }
         ],
         "src": [
@@ -28713,7 +28940,8 @@
                 "v": "Owner-occupier, private landlord. A person may also act for another natural person: the Regulation names such representation."
               }
             ],
-            "basis": "Regulation (EU) 2024/1183, Art. 5a(1) and 5a(4)."
+            "basis": "Regulation (EU) 2024/1183, Art. 5a(1) and 5a(4).",
+            "icon": "home-smile"
           },
           {
             "title": "Legal person: company, municipality, owners association",
@@ -28743,7 +28971,8 @@
                 "v": "Housing company, landlord company, municipality, energy company that owns the installation. An owners association (WEG) has legal capacity and is represented by its administrator; how a wallet classifies it is not established."
               }
             ],
-            "basis": "Regulation (EU) 2024/1183; COM(2025) 838 final; WEG sections 9a and 9b."
+            "basis": "Regulation (EU) 2024/1183; COM(2025) 838 final; WEG sections 9a and 9b.",
+            "icon": "building-07"
           },
           {
             "title": "Tenant, operator and other roles",
@@ -28761,7 +28990,8 @@
                 "v": "A change of owner or operator ends the claim and starts a new one (concept)."
               }
             ],
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "settings-02"
           }
         ],
         "src": [
@@ -28779,32 +29009,38 @@
           {
             "title": "What a knowledge graph is",
             "text": "A knowledge graph stores facts as short statements: subject, relation, object. The inverter is part of the home. The home is registered in a register. Every thing has an identifier, so statements from different sources join into one connected picture that people and software can query.",
-            "basis": "W3C RDF 1.1 Concepts."
+            "basis": "W3C RDF 1.1 Concepts.",
+            "icon": "share-07"
           },
           {
             "title": "How it is built from the passports",
             "text": "Each passport names its product by an identifier and lists data points, documents, certificates and links to other passports. The viewer turns each of these into statements and merges the statements about the same identifier. The graph on this page is built this way from the passports and registers in the data. VERA credentials follow the W3C credential data model 2.0, and its templates carry a mapping to an RDF vocabulary. Which proof suite and canonical form it uses has not been checked.",
-            "basis": "Local VERA API specification and templates."
+            "basis": "Local VERA API specification and templates.",
+            "icon": "dataflow-03"
           },
           {
             "title": "Why semantic models are needed",
             "text": "Without a shared model, rated power in one passport and nominal output in another cannot be joined. A semantic model gives each concept an identifier (an IRI), a type and defined relations, so data from different manufacturers merges without guessing and software can check it. RDF is the graph model. JSON-LD writes it as ordinary JSON, with a context that maps field names to identifiers.",
-            "basis": "W3C RDF 1.1; JSON-LD 1.1."
+            "basis": "W3C RDF 1.1; JSON-LD 1.1.",
+            "icon": "message-chat-circle"
           },
           {
             "title": "Models that can be reused",
             "text": "SAREF from ETSI, with SAREF4ENER for energy and SAREF4BLDG for buildings. Brick for building metadata. RealEstateCore for real estate. IEC CIM and IEC 61850 for grid and substation data. The W3C Web of Things Thing Description for device interfaces. Catena-X aspect models for industrial passports. None is claimed here as adopted for the EU product passport.",
-            "basis": "Each model on its own page (ETSI, Brick, RealEstateCore, IEC, W3C, Catena-X)."
+            "basis": "Each model on its own page (ETSI, Brick, RealEstateCore, IEC, W3C, Catena-X).",
+            "icon": "package"
           },
           {
             "title": "What EU standards say about format",
             "text": "Commission Implementing Decision (EU) 2026/1736 lists harmonised standards for digital product passports. This project has not read the standards, so whether they require JSON-LD, GS1 or IEC 61406 identifiers is not known.",
-            "basis": "Implementing Decision (EU) 2026/1736."
+            "basis": "Implementing Decision (EU) 2026/1736.",
+            "icon": "file-check-02"
           },
           {
             "title": "What a verifiable knowledge graph is",
             "text": "A graph whose statements each come from a signed W3C Verifiable Credential. The issuer signs the passport data. The viewer checks the signature, that the credential is not revoked and that the issuer is trusted, and only then merges the statements. Each statement stays linked to its credential, so the origin of every fact can be shown. The building blocks are standards. Combining them into one verifiable graph is this project's proposal; no source defines it.",
-            "basis": "W3C VC Data Model 2.0; Data Integrity 1.0; RDFC-1.0; PROV-O."
+            "basis": "W3C VC Data Model 2.0; Data Integrity 1.0; RDFC-1.0; PROV-O.",
+            "icon": "shield-tick"
           }
         ],
         "diagram": {
@@ -28830,7 +29066,8 @@
               "h": 62,
               "title": "Manufacturer",
               "text": "Product data, certificates",
-              "kind": "party"
+              "kind": "party",
+              "icon": "package"
             },
             {
               "id": "i2",
@@ -28840,7 +29077,8 @@
               "h": 62,
               "title": "Installer",
               "text": "Installation, commissioning",
-              "kind": "party"
+              "kind": "party",
+              "icon": "tool"
             },
             {
               "id": "i3",
@@ -28926,19 +29164,23 @@
           "arrows": [
             {
               "from": "i1",
-              "to": "c1"
+              "to": "c1",
+              "toAt": 0.2
             },
             {
               "from": "i2",
-              "to": "c1"
+              "to": "c1",
+              "toAt": 0.4
             },
             {
               "from": "i3",
-              "to": "c1"
+              "to": "c1",
+              "toAt": 0.6
             },
             {
               "from": "i4",
-              "to": "c1"
+              "to": "c1",
+              "toAt": 0.8
             },
             {
               "from": "c1",
@@ -28965,8 +29207,7 @@
                   155
                 ]
               ],
-              "label": "conforms",
-              "dy": -6
+              "label": "conforms"
             },
             {
               "from": "v2",
@@ -29036,42 +29277,50 @@
           {
             "title": "Tamper-evident data",
             "text": "A signature over the credential shows whether the data changed after the issuer signed it. A canonical form of the graph keeps hashes stable.",
-            "basis": "Data Integrity 1.0; RDFC-1.0; Regulation (EU) 2024/1781 Art. 11 and Regulation (EU) 2023/1542 Art. 78 ask for integrity of passport data."
+            "basis": "Data Integrity 1.0; RDFC-1.0; Regulation (EU) 2024/1781 Art. 11 and Regulation (EU) 2023/1542 Art. 78 ask for integrity of passport data.",
+            "icon": "lock-04"
           },
           {
             "title": "Cyber security",
             "text": "The viewer accepts only statements it can check, so a forged or altered passport does not enter the graph. The Cyber Resilience Act asks for protection of integrity.",
-            "basis": "Regulation (EU) 2024/2847, Annex I Part I (2)(f)."
+            "basis": "Regulation (EU) 2024/2847, Annex I Part I (2)(f).",
+            "icon": "shield-tick"
           },
           {
             "title": "Compliance evidence",
             "text": "Each obligation can point to the signed statement that meets it, with issuer, date and status. Auditors and market surveillance read evidence instead of copies.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "clipboard-check"
           },
           {
             "title": "Data quality",
             "text": "Shared models and shape checks catch missing fields, wrong types and impossible values before they reach a dashboard.",
-            "basis": "SHACL."
+            "basis": "SHACL.",
+            "icon": "check-circle"
           },
           {
             "title": "Certificates",
             "text": "A certificate of conformity becomes a credential of the certification body. Its status shows valid, suspended or withdrawn, and it links to the product it covers. The specimen certificates in this demo carry no number and no signature.",
-            "basis": "Concept. Seals of legal persons are evidence of origin under eIDAS."
+            "basis": "Concept. Seals of legal persons are evidence of origin under eIDAS.",
+            "icon": "certificate"
           },
           {
             "title": "Product safety",
             "text": "A recall or safety notice could be issued as a credential against a product type or batch and reach every graph that holds it. No source read describes this use.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "alert-triangle"
           },
           {
             "title": "Fraud prevention",
             "text": "A counterfeit certificate, or a passport copied to another product, fails the issuer and status check, and identifiers tie a passport to one product. The effect on counterfeiting has not been measured.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "fingerprint-04"
           },
           {
             "title": "Limits",
             "text": "A signature shows who said it and that it is unchanged. It does not show that it is true. Values still carry a status (verified, declared, illustrative or unknown), and trust in an issuer has to be managed.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "info-circle"
           }
         ],
         "src": [
@@ -29098,32 +29347,38 @@
           {
             "title": "What an agent-to-agent protocol does",
             "text": "The Agent2Agent protocol (A2A) was started by Google and given to the Linux Foundation in June 2025. Version 1.0.0 was released in March 2026. It defines an Agent Card that describes an agent, discovery, tasks and messages, authentication schemes and signing of Agent Cards. It defines no domain meaning, no contracts and no payments.",
-            "basis": "A2A specification and repository."
+            "basis": "A2A specification and repository.",
+            "icon": "message-chat-circle"
           },
           {
             "title": "Where the meaning comes from",
             "text": "The flexibility of a device can be described with existing models. SAREF4ENER v2.1.1 (ETSI TS 103 410-1) models flexibility requests, offers and instructions. The S2 standard and EEBUS cover flexibility on the device side, and OpenADR 3 covers market signals. What is missing is an accepted format for a priced flexibility offer between a household agent and a provider agent.",
-            "basis": "ETSI SAREF4ENER; S2 standard; OpenADR Alliance."
+            "basis": "ETSI SAREF4ENER; S2 standard; OpenADR Alliance.",
+            "icon": "database-02"
           },
           {
             "title": "How a negotiation could run",
             "text": "The owner agent holds a mandate: which devices, which limits such as the battery reserve and comfort, the price or return it must reach, and when the owner must approve. It discovers provider agents and reads their passports: verified identity, capability and security contact. It matches offers to the capabilities in the home knowledge graph, negotiates inside the mandate, records the agreement with a signed consent, and executes through the energy manager gate.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "route"
           },
           {
             "title": "What stays fixed",
             "text": "Grid operator reduction under section 14a EnWG takes precedence over market-based control. The lock-out layers apply to agents as to any party: no control right beyond the consent scope, and the energy manager checks every command.",
-            "basis": "BK6-22-300 (R8); the lock-out layers above."
+            "basis": "BK6-22-300 (R8); the lock-out layers above.",
+            "icon": "shield-tick"
           },
           {
             "title": "The law frames the contract, not the agent",
             "text": "Dynamic price contracts and aggregator contracts exist in law: aggregator contracts need text form and full pre-contract information (EnWG section 41e). No text read addresses an AI agent concluding a contract. The AI Act has no explicit high-risk class for a household flexibility agent, and its transparency duty applies where a natural person interacts with the AI system. The Data Act rules on smart contracts cover data-sharing agreements, not flexibility contracts. Who is bound, who is liable and what counts as evidence are open.",
-            "basis": "Directive (EU) 2019/944 Art. 11; EnWG; Regulation (EU) 2024/1689 Art. 50; Data Act Art. 36."
+            "basis": "Directive (EU) 2019/944 Art. 11; EnWG; Regulation (EU) 2024/1689 Art. 50; Data Act Art. 36.",
+            "icon": "file-06"
           },
           {
             "title": "Risks",
             "text": "Instructions injected into an agent can hijack it: NIST evaluated such attacks. A2A leaves authorisation to the implementer. Many agents acting alike could create new peaks; only secondary sources describe this. The product liability directive does not compensate pure financial loss. Mitigations in the concept: an owner mandate with hard limits, approval by the owner above a threshold, signed and revocable consent, logging, and the energy manager gate.",
-            "basis": "NIST CAISI; A2A enterprise features; Directive (EU) 2024/2853."
+            "basis": "NIST CAISI; A2A enterprise features; Directive (EU) 2024/2853.",
+            "icon": "alert-triangle"
           }
         ],
         "diagram": {
@@ -29274,8 +29529,7 @@
             {
               "from": "m1",
               "to": "f1",
-              "label": "Agent Card",
-              "dy": -8
+              "label": "Agent Card"
             },
             {
               "from": "m1",
@@ -29305,24 +29559,21 @@
               "from": "g1",
               "to": "m2",
               "kind": "data",
-              "label": "meaning",
-              "dy": -8
+              "label": "meaning"
             },
             {
               "from": "f2",
               "to": "m2",
               "fromSide": "l",
               "toSide": "r",
-              "label": "meaning",
-              "dy": -8
+              "label": "meaning"
             },
             {
               "from": "f3",
               "to": "m3",
               "fromSide": "l",
               "toSide": "r",
-              "label": "alternatives",
-              "dy": -8
+              "label": "alternatives"
             },
             {
               "from": "m5",
@@ -29330,8 +29581,7 @@
               "fromSide": "l",
               "toSide": "r",
               "kind": "control",
-              "label": "setpoints",
-              "dy": -8
+              "label": "setpoints"
             }
           ]
         },
@@ -29340,32 +29590,38 @@
           {
             "title": "Purchasing power: hypothesis",
             "text": "An owner agent could compare several offers continuously and move the owner's flexibility to the best one. No source tests agents against simple automation or a fixed tariff, so a gain in purchasing power and a faster payback of the investment are hypotheses. ACER and CEER find that real savings come mainly from behaviour change supported by automation.",
-            "basis": "ACER and CEER, Rewarding Flexibility (November 2025)."
+            "basis": "ACER and CEER, Rewarding Flexibility (November 2025).",
+            "icon": "stars-02"
           },
           {
             "title": "Savings seen in simulations",
             "text": "A simulation commissioned by a supplier gives 20 to 70 euros a year for a dynamic tariff without an EV or heat pump, 288 euros with an EV, a heat pump and intelligent control, and 985 euros with grid fee incentives. A small battery nets about 50 euros a year, and larger ones do not pay back on tariff arbitrage alone. These are simulations by an interested party, not measured results.",
-            "basis": "Neon for Naturstrom, short study on dynamic tariffs (October 2025)."
+            "basis": "Neon for Naturstrom, short study on dynamic tariffs (October 2025).",
+            "icon": "zap"
           },
           {
             "title": "Untapped potential for grids",
             "text": "The potential is large on paper: Agora Energiewende puts flexible household demand in Germany at about 100 TWh by 2035. Realised use is small: 73 percent of EU households were on fixed-price contracts in ACER's 2025 report. The gap between the two is potential, not realised value.",
-            "basis": "Agora Energiewende (2024); ACER (April 2025)."
+            "basis": "Agora Energiewende (2024); ACER (April 2025).",
+            "icon": "sun"
           },
           {
             "title": "Barriers",
             "text": "ACER has published no-regret actions to remove barriers to demand response. Whether shared semantics and agents lower those barriers is a hypothesis.",
-            "basis": "ACER, Unlocking flexibility."
+            "basis": "ACER, Unlocking flexibility.",
+            "icon": "minus-circle"
           },
           {
             "title": "Grid stability",
             "text": "Agents could pool the flexibility of many homes and offer it where the grid needs it. No source shows this working. The network code on demand response is still open, and grid operator reduction under section 14a stays first in priority.",
-            "basis": "Concept; European Commission consultation on the network code on demand response."
+            "basis": "Concept; European Commission consultation on the network code on demand response.",
+            "icon": "zap-fast"
           },
           {
             "title": "What the passports hold today and what is missing",
             "text": "They hold flexibility class, capacity, interface, control channel, consent scope, battery reserve level, who can switch off and provenance, as readable statements. Missing for an agent: machine-readable types (identifiers from SAREF or S2), endpoints and pairing identifiers, the agent endpoint and identity, a delegated authority mandate, a signed and revocable consent record, and the provider identifier with its issuer DID. The priced offer itself stays outside the passport.",
-            "basis": "This project's passport data; R13."
+            "basis": "This project's passport data; R13.",
+            "icon": "file-check-02"
           }
         ],
         "src": [
@@ -29392,37 +29648,44 @@
           {
             "title": "The infrastructure",
             "text": "Verifiable passports hold what is true about the home, signed by their issuers. The knowledge graph gives that data meaning by shared models and joins it by identifier. Access control decides who may see or do what, for how long, with a record of every action. These three layers are the same for every application.",
-            "basis": "Concept, built on the standards listed in the knowledge graph section."
+            "basis": "Concept, built on the standards listed in the knowledge graph section.",
+            "icon": "cube-02"
           },
           {
             "title": "The viewer is one way to see the system",
             "text": "This dashboard is a fixed design that shows the same data to everyone. It is useful for a discussion and for an owner who wants a ready view. It is not the product. Other applications read the same layers, and none of them owns the data.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "eye"
           },
           {
             "title": "Agents generate the owner's viewer",
             "text": "An owner agent can build a viewer to the owner's preferences: the language, the level of detail, what to watch such as cost, comfort, carbon or battery health, when to alert, and how to explain a value. The generated viewer reads only through the access layer, keeps no data of its own and shows every value with its status. It should be a declarative view definition that is checked before it is shown, not code written on the fly.",
-            "basis": "Concept. A view generated by an agent must not hide the status of a value or the source of a claim."
+            "basis": "Concept. A view generated by an agent must not hide the status of a value or the source of a claim.",
+            "icon": "stars-02"
           },
           {
             "title": "Agents work with each other",
             "text": "Authorised agents of the installer, the flex service provider, the asset optimiser and the maintenance provider can talk to the owner agent and to each other through an agent-to-agent protocol. Each agent acts under a mandate from the owner with a scope, limits and a period. The energy manager gate and the audit log apply to all of them.",
-            "basis": "Concept; see the agent section below for what is established."
+            "basis": "Concept; see the agent section below for what is established.",
+            "icon": "share-07"
           },
           {
             "title": "Why infrastructure matters",
             "text": "A new service attaches to the same graph and the same rules without a new integration. A new party needs an identity, a mandate and a way to read the graph. It does not need a new data format, a new portal or a copy of the data.",
-            "basis": "Concept."
+            "basis": "Concept.",
+            "icon": "link-03"
           },
           {
             "title": "Order of priority",
             "text": "Safety and law come first, for example the grid operator reduction under section 14a EnWG. The owner's rules come next. Market optimisation comes last. A mandate never widens a legal limit. When agents conflict, this order decides, and the owner can stop any agent at any time.",
-            "basis": "Concept, consistent with BK6-22-300 (R8)."
+            "basis": "Concept, consistent with BK6-22-300 (R8).",
+            "icon": "shield-tick"
           },
           {
             "title": "Delegation of authority",
             "text": "The wallet framework lists powers and mandates as an attribute category, which is the closest existing hook for delegating authority. No mandate type for software agents exists yet, and none defines how an agent proves it acts for an owner.",
-            "basis": "Regulation (EU) 2024/1183, Annex VI (R12)."
+            "basis": "Regulation (EU) 2024/1183, Annex VI (R12).",
+            "icon": "fingerprint-04"
           }
         ],
         "diagrams": [
@@ -29595,32 +29858,90 @@
             ],
             "arrows": [
               {
+                "from": "p1",
+                "to": "kg",
+                "fromSide": "t",
+                "toSide": "b",
+                "toAt": 0.1176
+              },
+              {
                 "from": "p2",
                 "to": "kg",
                 "fromSide": "t",
                 "toSide": "b",
-                "label": "signed data",
-                "dx": 60,
-                "dy": -2
+                "toAt": 0.3725,
+                "label": "signed data"
+              },
+              {
+                "from": "p3",
+                "to": "kg",
+                "fromSide": "t",
+                "toSide": "b",
+                "toAt": 0.6275
               },
               {
                 "from": "kg",
                 "to": "ac",
                 "fromSide": "t",
                 "toSide": "b",
-                "label": "meaning",
-                "dx": 60,
-                "dy": -2
+                "label": "meaning"
+              },
+              {
+                "from": "ac",
+                "to": "a0",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.0578,
+                "kind": "consent"
+              },
+              {
+                "from": "ac",
+                "to": "a1",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.2049,
+                "kind": "consent"
+              },
+              {
+                "from": "ac",
+                "to": "a2",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.352,
+                "kind": "consent"
               },
               {
                 "from": "ac",
                 "to": "a3",
                 "fromSide": "t",
                 "toSide": "b",
+                "fromAt": 0.499,
                 "kind": "consent",
-                "label": "scoped access",
-                "dx": 70,
-                "dy": -2
+                "label": "scoped access"
+              },
+              {
+                "from": "ac",
+                "to": "a4",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.6461,
+                "kind": "consent"
+              },
+              {
+                "from": "ac",
+                "to": "a5",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.7931,
+                "kind": "consent"
+              },
+              {
+                "from": "ac",
+                "to": "a6",
+                "fromSide": "t",
+                "toSide": "b",
+                "fromAt": 0.9402,
+                "kind": "consent"
               }
             ]
           },
@@ -29722,7 +30043,6 @@
                 "to": "s1",
                 "kind": "consent",
                 "label": "sub-mandates",
-                "dy": -14,
                 "via": [
                   [
                     520,
@@ -29880,27 +30200,32 @@
           {
             "title": "Telecom services",
             "text": "The gateway and the energy manager need a reliable connection. A telco agent could watch link health, propose backup connectivity and report outages. It needs the connectivity status, not the energy data.",
-            "basis": "Proposition."
+            "basis": "Proposition.",
+            "icon": "wifi"
           },
           {
             "title": "Facility management",
             "text": "Maintenance schedules, warranties, documents and service history are already in the passports. A facility management agent could plan inspections and keep the record for the owner or the property manager.",
-            "basis": "Proposition. The passports carry next service due, warranty and support contact data."
+            "basis": "Proposition. The passports carry next service due, warranty and support contact data.",
+            "icon": "tool-02"
           },
           {
             "title": "Insurance",
             "text": "Certificates, installation quality and maintenance records are evidence for a policy and for a claim. An insurance agent would see selected evidence with the owner's consent, not consumption or occupancy. Whether and how this changes premiums is open.",
-            "basis": "Proposition; no market or legal check made."
+            "basis": "Proposition; no market or legal check made.",
+            "icon": "shield-plus"
           },
           {
             "title": "Others",
             "text": "The same layers could serve a mortgage lender, a municipality, a service technician network or a second-life battery buyer, each with the narrow scope the owner grants.",
-            "basis": "Proposition."
+            "basis": "Proposition.",
+            "icon": "package"
           },
           {
             "title": "Where this stays honest",
             "text": "These are propositions to test, not products or a checked market. What is established is the standards and law listed in the sections above. Mandates for agents, agent-generated viewers, a common flexibility offer format and the liability among agents are open.",
-            "basis": "R13."
+            "basis": "R13.",
+            "icon": "info-circle"
           }
         ],
         "src": [
@@ -29908,6 +30233,108 @@
           "a2a-spec",
           "saref4ener-v211",
           "cra"
+        ]
+      },
+      "tour": {
+        "title": "What you see: a guided tour of the viewer",
+        "note": "The picture shows the Overview of the viewer. The numbers on the picture match the list. All values are illustrative.",
+        "image": "assets/about/viewer-tour.png",
+        "width": 1300,
+        "height": 1000,
+        "alt": "Screenshot of the Building Passport Viewer overview: header, side menu, the home scene with component tiles and energy flows, and the performance figures.",
+        "callouts": [
+          {
+            "n": 1,
+            "x": 26.8,
+            "y": 1.6,
+            "title": "Header",
+            "text": "One slim bar that stays in view. It states that this is a concept demonstration and that parties, values and ratings are illustrative."
+          },
+          {
+            "n": 2,
+            "x": 20.4,
+            "y": 38,
+            "title": "Side menu",
+            "text": "The topics of the home: Alerts, Energy, Batteries, Services, User information, Registrations, Grid operator, Passports, Components, Compliance and About. On a phone it becomes a menu button under the header."
+          },
+          {
+            "n": 3,
+            "x": 54.4,
+            "y": 28.8,
+            "title": "Three views of the same passports",
+            "text": "Home scene, Hierarchy and Knowledge graph show the same data in different ways: a drawing of the home, a tree of components, and the relations between parties, passports, registers and certificates."
+          },
+          {
+            "n": 4,
+            "x": 86,
+            "y": 27,
+            "title": "Alert badge",
+            "text": "Counts open items across firmware, documents and registrations. Select it to see who has to act and where."
+          },
+          {
+            "n": 5,
+            "x": 53.6,
+            "y": 42.5,
+            "title": "Component tile",
+            "text": "Every tile is one passport. Select it to open its data in the viewer. The button Open issued passport leads to the live passport on the platform."
+          },
+          {
+            "n": 6,
+            "x": 53.9,
+            "y": 47.6,
+            "title": "Registration status",
+            "text": "Registered, Pending, Prepared or Unknown: where the unit stands in the Marktstammdatenregister, ZEREZ and the grid connection."
+          },
+          {
+            "n": 7,
+            "x": 54.3,
+            "y": 53.4,
+            "title": "Lines between tiles",
+            "text": "Solid lines are energy flows with example values. Dashed lines carry measured values. Dotted lines are control signals, such as the channel from the meter system to the energy manager."
+          },
+          {
+            "n": 8,
+            "x": 53.6,
+            "y": 68,
+            "title": "Battery gauges",
+            "text": "Charge level of each of the three batteries. The values are illustrative and not measured."
+          },
+          {
+            "n": 9,
+            "x": 82.6,
+            "y": 44.5,
+            "title": "Parties outside the home",
+            "text": "Dashed tiles are parties: the flex provider FlexCo and the public grid. The smart meter system belongs to the metering point operator."
+          },
+          {
+            "n": 10,
+            "x": 25.6,
+            "y": 88.4,
+            "title": "Performance figures",
+            "text": "Energy now and today, with self-consumption and self-sufficiency. Illustrative values."
+          }
+        ],
+        "explain": [
+          {
+            "title": "What the data is",
+            "icon": "database-02",
+            "text": "Everything on screen comes from 13 demonstration passports: the home, 11 component passports and one service passport for the flex service. Each value carries a status: verified, declared, illustrative or unknown."
+          },
+          {
+            "title": "What the services are",
+            "icon": "zap-fast",
+            "text": "Alerts show what needs attention. Registrations show the state of each register and offer a mock start of the process. The Grid operator view shows what a grid operator can read and send. Services covers the flex service selection, take back and second life. User information holds manuals and firmware. The services read passport data; they do not run the devices."
+          },
+          {
+            "title": "How it is structured",
+            "icon": "dataflow-03",
+            "text": "Three levels. The menu chooses a topic. A topic shows a view such as the scene, the hierarchy, the knowledge graph or a table. A tile or a row opens the passport of one component, with tabs for support, condition, installation, grid and flex, end of life, compliance, cyber resilience and certificates."
+          },
+          {
+            "title": "How to navigate",
+            "icon": "route",
+            "text": "Start on Overview, pick a topic in the menu, open a tile for its passport, and use Back to hierarchy or the menu to return. Every address can be shared. With the keyboard, Tab moves to a tile, Enter opens it and the arrow keys move between tiles."
+          }
         ]
       }
     },
