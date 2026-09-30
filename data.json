@@ -27973,7 +27973,7 @@
   "app": {
     "title": "Home energy system",
     "header": {
-      "title": "Building Passport Viewer",
+      "title": "Agentic Building Passport Viewer",
       "note": "Concept demonstration with example data. Parties, values and ratings are illustrative."
     },
     "about": {
@@ -30241,12 +30241,12 @@
         "image": "assets/about/viewer-tour.png",
         "width": 1300,
         "height": 1000,
-        "alt": "Screenshot of the Building Passport Viewer overview: header, side menu, the home scene with component tiles and energy flows, and the performance figures.",
+        "alt": "Screenshot of the Agentic Building Passport Viewer overview: header, side menu, the home scene with component tiles and energy flows, and the performance figures.",
         "callouts": [
           {
             "n": 1,
-            "x": 26.8,
-            "y": 1.6,
+            "x": 45.4,
+            "y": 2.1,
             "title": "Header",
             "text": "One slim bar that stays in view. It states that this is a concept demonstration and that parties, values and ratings are illustrative."
           },

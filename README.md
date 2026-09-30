@@ -1,4 +1,4 @@
-# Building Passport Viewer (concept demonstration)
+# Agentic Building Passport Viewer (concept demonstration)
 
 A connected passport viewer for a fictional single-family home in Germany: home scene, hierarchy and knowledge graph views, alerts, registrations, grid operator view, flex service selection and an About page on the concept.
 
