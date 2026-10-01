@@ -22,7 +22,8 @@ jobs:
         run: |
           mkdir _site
           cp index.html data.json _site/
-          cp -r assets _site/assets          cp BESS-demo.html _site/
+          cp -r assets _site/assets
+          cp BESS-demo.html _site/
           touch _site/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
